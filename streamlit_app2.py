@@ -1,0 +1,16 @@
+import streamlit as st
+
+st.title("📸 نمایش عکس بر اساس نام")
+
+# گرفتن نام از کاربر و حذف فاصله‌های اضافی
+name = st.text_input("نام را وارد کنید (حسن، احمد، محمد):").strip()
+
+# بررسی شرط‌ها برای نمایش عکس
+if name == "حسن":
+    st.image("https://github.com/yadeyar-arch/My.first.app/blob/main/IMG-20260628-WA0005.jpg")
+elif name == "احمد":
+    st.image("https://github.com/yadeyar-arch/My.first.app/blob/main/%D9%A2%D9%A0%D9%A2%D9%A5%D9%A0%D9%A2%D9%A1%D9%A6_%D9%A2%D9%A0%D9%A3%D9%A0%D9%A3%D9%A6.jpg")
+elif name == "محمد":
+    st.image("https://github.com/yadeyar-arch/My.first.app/blob/main/IMG-20260621-WA0029.jpg")
+elif name != "":
+    st.error("این نام در سیستم تعریف نشده است! ❌")
